@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAN</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#000;
+    color:white;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    text-align:center;
+    position:relative;
+    z-index:10;
+}
+
+.username{
+    font-size:70px;
+    font-weight:700;
+}
+
+.tag{
+    margin-top:5px;
+    opacity:.8;
+}
+
+.status{
+    margin-top:5px;
+    opacity:.7;
+}
+
+.socials{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+}
+
+.social-icon{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-decoration:none;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(20px);
+
+    transition:all .25s ease;
+}
+
+.social-icon:hover{
+    transform:scale(1.15);
+    background:rgba(255,255,255,.18);
+    border-color:rgba(255,255,255,.4);
+    box-shadow:0 0 25px rgba(255,255,255,.35);
+}
+
+.cards{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.card{
+    width:430px;
+    height:140px;
+    display:flex;
+    align-items:center;
+    padding:20px;
+    border-radius:20px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.1);
+    backdrop-filter:blur(20px);
+
+    transition:all .3s ease;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:rgba(255,255,255,.3);
+    box-shadow:0 0 35px rgba(255,255,255,.15);
+}
+
+.avatar{
+    width:85px;
+    height:85px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.music-cover{
+    width:95px;
+    height:95px;
+    border-radius:15px;
+    object-fit:cover;
+}
+
+.card-content,
+.music-info{
+    margin-left:15px;
+    text-align:left;
+}
+
+.discord-icon{
+    margin-left:auto;
+    font-size:40px;
+}
+
+.play{
+    margin-left:auto;
+    width:55px;
+    height:55px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:20px;
+
+    transition:all .25s ease;
+}
+
+.play:hover{
+    transform:scale(1.15);
+    background:white;
+}
+
+.views{
+    margin-top:25px;
+    font-size:20px;
+    color:white;
+    opacity:.9;
+    transition:.3s;
+}
+
+.views:hover{
+    opacity:1;
+    text-shadow:0 0 10px rgba(255,255,255,.5);
+}
+
+.snow{
+    position:fixed;
+    top:-50px;
+    color:white;
+    pointer-events:none;
+    z-index:1;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+
+    from{
+        transform:translateY(0px);
+    }
+
+    to{
+        transform:translateY(110vh);
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1 class="username">// DAN</h1>
+
+<div class="tag">15_15d</div>
+
+<div class="status">Initiating Sel</div>
+
+<div class="socials">
+
+<a href="ILAGAY_MO_DISCORD_LINK" class="social-icon">
+<i class="fab fa-discord"></i>
+</a>
+
+<a href="ILAGAY_MO_SPOTIFY_LINK" class="social-icon">
+<i class="fab fa-spotify"></i>
+</a>
+
+<a href="ILAGAY_MO_TIKTOK_LINK" class="social-icon">
+<i class="fab fa-tiktok"></i>
+</a>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+
+<img class="avatar"
+src="https://media.discordapp.net/attachments/1498917766663770172/1532694583836672070/Cars_walls__darkness_and_me_.jpg?ex=6a6dc890&is=6a6c7710&hm=07eb4bff2d6cd58817378df11f933c1b380d663feee9fddf9c47f737757da697&=&format=webp&width=676&height=676">
+
+<div class="card-content">
+<h3>DAN</h3>
+<p>15_15d</p>
+<p>11109</p>
+</div>
+
+<i class="fab fa-discord discord-icon"></i>
+
+</div>
+
+<div class="card">
+
+<img class="music-cover"
+src="https://media.discordapp.net/attachments/1498917766663770172/1532694583497195561/Screenshot_2026-07-31_181827.png?ex=6a6dc890&is=6a6c7710&hm=414e3273de42bb87193a4243449165b68d2c3f3dcd0531eb589cf2968b6d2032&=&format=webp&quality=lossless&width=689&height=676">
+
+<div class="music-info">
+<small>NOW PLAYING</small>
+<h2>TOO FLY</h2>
+<p>Music Player</p>
+</div>
+
+<button class="play" onclick="toggleMusic()">
+    <i class="fa-solid fa-play"></i>
+</button>
+
+</div>
+
+</div>
+
+<div class="views">
+    <i class="fa-solid fa-eye"></i>
+    <span id="viewCount">11109</span>
+</div>
+
+</div>
+
+<script>
+
+function createSnow(){
+
+    const snow = document.createElement("div");
+
+    snow.className = "snow";
+
+    snow.innerHTML = "❄";
+
+    snow.style.left = Math.random() * 100 + "vw";
+
+    snow.style.fontSize =
+    (10 + Math.random() * 20) + "px";
+
+    snow.style.animationDuration =
+    (4 + Math.random() * 8) + "s";
+
+    document.body.appendChild(snow);
+
+    setTimeout(() => {
+
+        snow.remove();
+
+    },12000);
+
+}
+
+setInterval(() => {
+
+    createSnow();
+
+},120);
+
+for(let i = 0; i < 80; i++){
+
+    setTimeout(() => {
+
+        createSnow();
+
+    },i * 100);
+
+}
+for(let i = 0; i < 80; i++){
+
+    setTimeout(() => {
+
+        createSnow();
+
+    },i * 100);
+
+}
+
+let views = localStorage.getItem("views");
+
+if(!views){
+    views = 11109;
+}else{
+    views = parseInt(views) + 50;
+}
+
+localStorage.setItem("views", views);
+
+document.getElementById("viewCount").textContent = views;
+
+</script>
+
+<script>
+function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+}
+</script>
+
+<audio id="bgMusic" loop>
+    <source src="TOO FLY.mp3" type="audio/mpeg">
+</audio>
+
+</body>
+</html>
