@@ -268,9 +268,9 @@ for(let i = 0; i < 80; i++){ setTimeout(createSnow, i * 100); }
 
 let views = localStorage.getItem("views");
 if(!views){
-    views = 11109;
+    views = 1;
 }else{
-    views = parseInt(views) + -11715;
+    views = parseInt(views) - 11715;
 }
 localStorage.setItem("views", views);
 document.getElementById("viewCount").textContent = views;
