@@ -269,7 +269,7 @@ let views = localStorage.getItem("views");
 if(!views){
     views = 11109;
 }else{
-    views = parseInt(views) + -1000;
+    views = parseInt(views) + -1;
 }
 localStorage.setItem("views", views);
 document.getElementById("viewCount").textContent = views;
