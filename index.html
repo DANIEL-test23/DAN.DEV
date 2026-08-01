@@ -197,16 +197,16 @@ body{
 
 <div class="socials">
 
-<a href="https://discord.com/users/15_15d" class="social-icon">
-<i class="fab fa-discord"></i>
+<a href="https://discord.com/users/15_15d" target="_blank" class="social-icon">
+    <i class="fab fa-discord"></i>
 </a>
 
-<a href="https://open.spotify.com/playlist/0W9euwsNQZhzsQ3yD1MsON?si=92fed17442e2477f" class="social-icon">
-<i class="fab fa-spotify"></i>
+<a href="https://open.spotify.com/playlist/0W9euwsNQZhzsQ3yD1MsON?si=92fed17442e2477f" target="_blank" class="social-icon">
+    <i class="fab fa-spotify"></i>
 </a>
 
-<a href="https://www.tiktok.com/@dan.m331" class="social-icon">
-<i class="fab fa-tiktok"></i>
+<a href="https://www.tiktok.com/@dan.m331" target="_blank" class="social-icon">
+    <i class="fab fa-tiktok"></i>
 </a>
 
 </div>
@@ -240,7 +240,7 @@ src="https://media.discordapp.net/attachments/1498917766663770172/15326945834971
 </div>
 
 <button class="play" onclick="toggleMusic()">
-    <i class="fa-solid fa-play"></i>
+    <i id="musicIcon" class="fa-solid fa-play"></i>
 </button>
 
 </div>
@@ -336,6 +336,21 @@ function toggleMusic() {
 <audio id="bgMusic" loop>
     <source src="TOO FLY.mp3" type="audio/mpeg">
 </audio>
+
+<script>
+function toggleMusic() {
+    const music = document.getElementById("bgMusic");
+    const icon = document.getElementById("musicIcon");
+
+    if (music.paused) {
+        music.play();
+        icon.className = "fa-solid fa-pause";
+    } else {
+        music.pause();
+        icon.className = "fa-solid fa-play";
+    }
+}
+</script>
 
 </body>
 </html>
